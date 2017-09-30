@@ -10,6 +10,9 @@ function bookSearch() {
 		success: function(data){
 			for (i = 0; i < data.items.length; i++) {
 				results.innerHTML += "<h2>" + data.items[i].volumeInfo.title + "</h2>"
+				 + "<img src='" + data.items[i].volumeInfo.imageLinks.thumbnail + "''>"
+
+				// console.log(data)
 			}
 		},
 
@@ -18,3 +21,10 @@ function bookSearch() {
 }
 
 document.getElementById('button').addEventListener('click', bookSearch, false)
+
+
+
+
+
+
+// <img src="   ">
