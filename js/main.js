@@ -32,6 +32,7 @@ function bookSearch() {
 				// add class to elements
 				newBook.className = 'newBook'
 				newBookAnchor.className = 'btn btn-primary'
+				newBookImg.className = 'newBookImgClass'
 
 				// add book title to book title tag
 				newBookTitle.innerText = bookData.title
@@ -88,7 +89,11 @@ document.getElementById('button').addEventListener('click', bookSearch, false)
 
 
 
-
-
+// enable press enter to search
+document.getElementById('search').onkeypress=function(enter){
+    if(enter.keyCode==13){
+        document.getElementById('button').click();
+    }
+}
 
 // <img src="   ">
